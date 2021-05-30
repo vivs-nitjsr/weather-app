@@ -6,7 +6,7 @@ import com.global.weather.commons.JsonParser
 import com.global.weather.data.remote.api.WeatherApi
 import com.global.weather.data.remote.model.WeatherApiModel
 import com.global.weather.domain.repository.WeatherRepository
-import io.reactivex.rxjava3.core.Observable
+import io.reactivex.Observable
 import javax.inject.Inject
 
 internal class WeatherRepositoryImpl @Inject constructor(

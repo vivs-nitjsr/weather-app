@@ -2,7 +2,7 @@ package com.global.weather.data.remote.repository
 
 import com.global.weather.WeatherTestData
 import com.global.weather.data.remote.api.WeatherApi
-import io.reactivex.rxjava3.core.Observable
+import io.reactivex.Observable
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith

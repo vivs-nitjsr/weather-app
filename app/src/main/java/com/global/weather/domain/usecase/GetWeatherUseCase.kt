@@ -5,8 +5,8 @@ import com.global.weather.domain.mapper.WeatherDomainMapper
 import com.global.weather.domain.model.Location
 import com.global.weather.domain.model.Weather
 import com.global.weather.domain.repository.WeatherRepository
-import io.reactivex.rxjava3.core.Observable
-import io.reactivex.rxjava3.schedulers.Schedulers
+import io.reactivex.Observable
+import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 internal class GetWeatherUseCase @Inject constructor(

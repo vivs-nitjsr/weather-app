@@ -1,7 +1,7 @@
 package com.global.weather.data.remote.api
 
 import com.global.weather.data.remote.model.WeatherApiModel
-import io.reactivex.rxjava3.core.Observable
+import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Path
 

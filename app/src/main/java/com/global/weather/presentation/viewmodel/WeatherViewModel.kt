@@ -8,8 +8,8 @@ import com.global.weather.domain.model.Weather
 import com.global.weather.domain.usecase.GetWeatherUseCase
 import com.global.weather.presentation.mapper.WeatherReportUiModelMapper
 import com.global.weather.presentation.model.WeatherBaseUiModel
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
-import io.reactivex.rxjava3.schedulers.Schedulers
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 internal class WeatherViewModel @Inject constructor(
