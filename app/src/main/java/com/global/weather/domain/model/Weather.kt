@@ -1,7 +1,7 @@
 package com.global.weather.domain.model
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
 internal data class Weather(
@@ -9,6 +9,6 @@ internal data class Weather(
     val longitude: Double,
     val timezone: String,
     val currentWeather: WeatherReport,
-    val hourlyWeatherReport: WeatherReportList,
-    val dailyWeatherReport: WeatherReportList
+    val hourlyWeatherReportList: WeatherReportList,
+    val dailyWeatherReportList: WeatherReportList
 ) : Parcelable

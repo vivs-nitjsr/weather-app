@@ -5,14 +5,14 @@ import com.global.weather.data.remote.model.WeatherReportListApiModel
 import com.global.weather.domain.model.WeatherReportList
 
 internal class WeatherReportListDomainMapper(
-    private val weatherDomainMapper: WeatherDomainMapper
+    private val weatherReportDomainMapper: WeatherReportDomainMapper
 ) : Mapper<WeatherReportListApiModel, WeatherReportList> {
     override fun map(from: WeatherReportListApiModel): WeatherReportList {
         return WeatherReportList(
             summary = from.summary,
             icon = from.icon,
             weatherReport = from.weatherReport.map {
-                weatherDomainMapper.map(it)
+                weatherReportDomainMapper.map(it)
             }
         )
     }

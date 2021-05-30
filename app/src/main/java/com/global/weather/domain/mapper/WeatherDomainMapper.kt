@@ -14,8 +14,8 @@ internal class WeatherDomainMapper(
             longitude = from.longitude,
             timezone = from.timezone,
             currentWeather = from.currentWeather.let { weatherReportDomainMapper.map(it) },
-            hourlyWeatherReport = from.hourlyWeatherReportList.let { weatherReportListDomainMapper.map(it) },
-            dailyWeatherReport = from.dailyWeatherReportList.let { weatherReportListDomainMapper.map(it) }
+            hourlyWeatherReportList = from.hourlyWeatherReportList.let { weatherReportListDomainMapper.map(it) },
+            dailyWeatherReportList = from.dailyWeatherReportList.let { weatherReportListDomainMapper.map(it) }
         )
     }
 }

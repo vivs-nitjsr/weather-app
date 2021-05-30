@@ -9,5 +9,5 @@ internal class WeatherReportListApiModel(
     @SerializedName("icon")
     val icon: String,
     @SerializedName("data")
-    val weatherReport: List<WeatherApiModel>
+    val weatherReport: List<WeatherReportApiModel>
 ) : Serializable

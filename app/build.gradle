@@ -53,7 +53,16 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
 
+    //Testing
     testImplementation "junit:junit:$jUnitVersion"
+
+    //Mockito
+    testImplementation "org.mockito:mockito-core:$mockitoCoreVersion"
+    testImplementation "org.mockito:mockito-inline:$mockitoInlineVersion"
+    testImplementation "org.mockito.kotlin:mockito-kotlin:$mockitoKotlinVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJUnitVersion"
+    testImplementation "androidx.arch.core:core-testing:$androidxTestCore"
+
+    //Espresso
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
 }
