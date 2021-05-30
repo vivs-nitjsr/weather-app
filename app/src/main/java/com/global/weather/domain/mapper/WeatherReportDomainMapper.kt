@@ -3,8 +3,9 @@ package com.global.weather.domain.mapper
 import com.global.weather.commons.Mapper
 import com.global.weather.data.remote.model.WeatherReportApiModel
 import com.global.weather.domain.model.WeatherReport
+import javax.inject.Inject
 
-internal class WeatherReportDomainMapper : Mapper<WeatherReportApiModel, WeatherReport> {
+internal class WeatherReportDomainMapper @Inject constructor() : Mapper<WeatherReportApiModel, WeatherReport> {
     override fun map(from: WeatherReportApiModel): WeatherReport {
         return WeatherReport(
             time = from.time,

@@ -14,4 +14,7 @@ ext {
     mockitoCoreVersion='3.7.7'
     mockitoInlineVersion='3.10.0'
     mockitoKotlinVersion='3.2.0'
+    androidxLifecycle = '2.2.0'
+    daggerVersion = '2.24'
+    daggerSupportVersion = '2.28.1'
 }

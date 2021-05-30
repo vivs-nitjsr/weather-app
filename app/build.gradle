@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-parcelize'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -31,8 +32,8 @@ android {
         jvmTarget = '1.8'
     }
 
-    viewBinding {
-        enabled = true
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -51,6 +52,16 @@ dependencies {
     //Rx
     implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
     implementation "io.reactivex.rxjava3:rxjava:$rxJavaVersion"
+
+    //Dagger
+    //Dagger
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerSupportVersion"
+
+
+    implementation("androidx.lifecycle:lifecycle-extensions:$androidxLifecycle")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$androidxLifecycle")
 
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"

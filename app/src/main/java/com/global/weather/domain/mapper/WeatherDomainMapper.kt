@@ -3,8 +3,9 @@ package com.global.weather.domain.mapper
 import com.global.weather.commons.Mapper
 import com.global.weather.data.remote.model.WeatherApiModel
 import com.global.weather.domain.model.Weather
+import javax.inject.Inject
 
-internal class WeatherDomainMapper(
+internal class WeatherDomainMapper @Inject constructor(
     private val weatherReportDomainMapper: WeatherReportDomainMapper,
     private val weatherReportListDomainMapper: WeatherReportListDomainMapper
 ) : Mapper<WeatherApiModel, Weather> {

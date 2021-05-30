@@ -1,16 +1,17 @@
 package com.global.weather.data.remote.repository
 
+import android.app.Application
 import com.global.weather.commons.AssetFileLoader
 import com.global.weather.commons.JsonParser
 import com.global.weather.data.remote.api.WeatherApi
 import com.global.weather.data.remote.model.WeatherApiModel
 import com.global.weather.domain.repository.WeatherRepository
-import com.global.weather.presentation.WeatherApplication
 import io.reactivex.rxjava3.core.Observable
+import javax.inject.Inject
 
-internal class WeatherRepositoryImpl(
+internal class WeatherRepositoryImpl @Inject constructor(
     private val weatherApi: WeatherApi,
-    private val app: WeatherApplication,
+    private val app: Application,
     private val assetFileLoader: AssetFileLoader,
     private val jsonParser: JsonParser
 ) : WeatherRepository {

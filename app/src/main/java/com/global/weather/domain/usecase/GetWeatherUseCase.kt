@@ -7,8 +7,9 @@ import com.global.weather.domain.model.Weather
 import com.global.weather.domain.repository.WeatherRepository
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.schedulers.Schedulers
+import javax.inject.Inject
 
-internal class GetWeatherUseCase(
+internal class GetWeatherUseCase @Inject constructor(
     private val repository: WeatherRepository,
     private val weatherDomainMapper: WeatherDomainMapper
 ) : RxUseCase<Location, Weather> {

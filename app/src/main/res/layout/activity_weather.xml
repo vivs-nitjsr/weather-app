@@ -8,8 +8,9 @@
 
     <FrameLayout
         android:id="@+id/containerFrameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/d0"
+        android:layout_height="@dimen/d0"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
