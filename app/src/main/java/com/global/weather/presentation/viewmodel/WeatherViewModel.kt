@@ -7,7 +7,7 @@ import com.global.weather.domain.model.Location
 import com.global.weather.domain.model.Weather
 import com.global.weather.domain.usecase.GetWeatherUseCase
 import com.global.weather.presentation.mapper.WeatherReportUiModelMapper
-import com.global.weather.presentation.model.WeatherReportUiModel
+import com.global.weather.presentation.model.WeatherBaseUiModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
 import javax.inject.Inject
@@ -17,8 +17,8 @@ internal class WeatherViewModel @Inject constructor(
     private val weatherReportUiModelMapper: WeatherReportUiModelMapper
 ) : BaseViewModel() {
 
-    private val weatherReportState = MutableLiveData<List<WeatherReportUiModel>>()
-    val weatherReportViewState: LiveData<List<WeatherReportUiModel>>
+    private val weatherReportState = MutableLiveData<List<WeatherBaseUiModel>>()
+    val weatherReportViewState: LiveData<List<WeatherBaseUiModel>>
         get() = weatherReportState
 
     fun onViewReady(location: Location) {
@@ -41,7 +41,7 @@ internal class WeatherViewModel @Inject constructor(
             .disposedBy(compositeDisposable)
     }
 
-    private fun onWeatherRetrieved(weatherReport: List<WeatherReportUiModel>) {
+    private fun onWeatherRetrieved(weatherReport: List<WeatherBaseUiModel>) {
         weatherReportState.value = weatherReport
     }
 

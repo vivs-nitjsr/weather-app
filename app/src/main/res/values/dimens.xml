@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <dimen name="d0_sixteenth">0.5dp</dimen>
+    <dimen name="d0_eighth">1dp</dimen>
     <dimen name="d0">0dp</dimen>
     <dimen name="d1">8dp</dimen>
     <dimen name="d2">16dp</dimen>

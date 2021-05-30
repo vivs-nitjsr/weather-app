@@ -11,59 +11,59 @@ internal class WeatherReportApiModel(
     @SerializedName("icon")
     val icon: String,
     @SerializedName("temperature")
-    val temperature: Float?,
+    val temperature: Double?,
     @SerializedName("apparentTemperature")
-    val apparentTemperature: Float?,
+    val apparentTemperature: Double?,
     @SerializedName("dewPoint")
-    val dewPoint: Float,
+    val dewPoint: Double,
     @SerializedName("humidity")
-    val humidity: Float,
+    val humidity: Double,
     @SerializedName("pressure")
-    val pressure: Float,
+    val pressure: Double,
     @SerializedName("windSpeed")
-    val windSpeed: Float,
+    val windSpeed: Double,
     @SerializedName("windGust")
-    val windGust: Float,
+    val windGust: Double,
     @SerializedName("windBearing")
-    val windBearing: Float,
+    val windBearing: Double,
     @SerializedName("cloudCover")
-    val cloudCover: Float,
+    val cloudCover: Double,
     @SerializedName("uvIndex")
     val uvIndex: Int,
     @SerializedName("visibility")
     val visibility: Int,
     @SerializedName("ozone")
-    val ozone: Float,
+    val ozone: Double,
     @SerializedName("precipIntensity")
-    val precipIntensity: Float,
+    val precipIntensity: Double,
     @SerializedName("precipProbability")
-    val precipProbability: Float,
+    val precipProbability: Double,
     @SerializedName("sunriseTime")
     val sunriseTime: Long?,
     @SerializedName("sunsetTime")
     val sunsetTime: Long?,
     @SerializedName("moonPhase")
-    val moonPhase: Float?,
+    val moonPhase: Double?,
     @SerializedName("precipIntensityMax")
-    val precipIntensityMax: Float?,
+    val precipIntensityMax: Double?,
     @SerializedName("precipIntensityMaxTime")
     val precipIntensityMaxTime: Long?,
     @SerializedName("precipType")
     val precipType: String?,
     @SerializedName("temperatureHigh")
-    val temperatureHigh: Float?,
+    val temperatureHigh: Double?,
     @SerializedName("temperatureHighTime")
     val temperatureHighTime: Long?,
     @SerializedName("temperatureLow")
-    val temperatureLow: Float?,
+    val temperatureLow: Double?,
     @SerializedName("temperatureLowTime")
     val temperatureLowTime: Long?,
     @SerializedName("apparentTemperatureHigh")
-    val apparentTemperatureHigh: Float?,
+    val apparentTemperatureHigh: Double?,
     @SerializedName("apparentTemperatureHighTime")
     val apparentTemperatureHighTime: Long?,
     @SerializedName("apparentTemperatureLow")
-    val apparentTemperatureLow: Float?,
+    val apparentTemperatureLow: Double?,
     @SerializedName("apparentTemperatureLowTime")
     val apparentTemperatureLowTime: Long?,
     @SerializedName("windGustTime")
@@ -71,19 +71,19 @@ internal class WeatherReportApiModel(
     @SerializedName("uvIndexTime")
     val uvIndexTime: Long?,
     @SerializedName("temperatureMin")
-    val temperatureMin: Float?,
+    val temperatureMin: Double?,
     @SerializedName("temperatureMinTime")
     val temperatureMinTime: Long?,
     @SerializedName("temperatureMax")
-    val temperatureMax: Float?,
+    val temperatureMax: Double?,
     @SerializedName("temperatureMaxTime")
     val temperatureMaxTime: Long?,
     @SerializedName("apparentTemperatureMin")
-    val apparentTemperatureMin: Float?,
+    val apparentTemperatureMin: Double?,
     @SerializedName("apparentTemperatureMinTime")
     val apparentTemperatureMinTime: Long?,
     @SerializedName("apparentTemperatureMax")
-    val apparentTemperatureMax: Float?,
+    val apparentTemperatureMax: Double?,
     @SerializedName("apparentTemperatureMaxTime")
     val apparentTemperatureMaxTime: Long?
 ) : Serializable

@@ -19,6 +19,7 @@
             style="@style/TitleLg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/d1"
             android:textColor="@color/neutral_primary"
             app:drawableStartCompat="@drawable/ic_location_on_white_24dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,22 +75,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/neutral_secondary"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/summaryTextView"
             tools:text="32&#xb0; / 27&#xb0;" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/moreButtonView"
-            style="@style/TitleMd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/d3"
-            android:background="@drawable/shape_rounded_button"
-            android:text="@string/more"
-            android:textColor="@color/interaction_primary"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/minMaxTemperatureTextView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
