@@ -13,7 +13,7 @@ internal class WeatherApiModel(
     @SerializedName("currently")
     val currentWeather: WeatherReportApiModel,
     @SerializedName("hourly")
-    val hourlyWeatherReport: WeatherReportListApiModel,
+    val hourlyWeatherReportList: WeatherReportListApiModel,
     @SerializedName("daily")
-    val dailyWeatherReport: WeatherReportListApiModel
+    val dailyWeatherReportList: WeatherReportListApiModel
 ) : Serializable

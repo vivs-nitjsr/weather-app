@@ -8,7 +8,7 @@ import retrofit2.http.Path
 internal interface WeatherApi {
     @GET("https://api.darksky.net/forecast/2bb07c3bece89caf533ac9a5d23d8417/{latitude},{longitude}")
     fun getWeather(
-        @Path("latitude") latitude: Long,
-        @Path("longitude") longitude: Long
+        @Path("latitude") latitude: Double,
+        @Path("longitude") longitude: Double
     ): Observable<WeatherApiModel>
 }
