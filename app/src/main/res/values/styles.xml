@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TitleLg">
+        <item name="android:textSize">@dimen/font_size_xl</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="TitleMd">
+        <item name="android:textSize">@dimen/font_size_l</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="TitleSm">
+        <item name="android:textSize">@dimen/font_size_m</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="TitleXl">
+        <item name="android:textSize">@dimen/font_size_xxl</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="Highlight">
+        <item name="android:textSize">@dimen/font_size_s</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="HighlightSm">
+        <item name="android:textSize">@dimen/font_size_xs</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="HighlightXs">
+        <item name="android:textSize">@dimen/font_size_xxs</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="Body">
+        <item name="android:textSize">@dimen/font_size_s</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="BodySm">
+        <item name="android:textSize">@dimen/font_size_xs</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+</resources>

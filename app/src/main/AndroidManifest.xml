@@ -3,13 +3,14 @@
     package="com.global.weather">
 
     <application
+        android:name=".presentation.WeatherApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WeatherActivity">
-        <activity android:name=".presentation.activities.WeatherActivity">
+        <activity android:name="com.global.weather.presentation.ui.activities.WeatherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

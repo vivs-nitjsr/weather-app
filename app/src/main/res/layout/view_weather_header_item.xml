@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weatherCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/elevation_lvl3"
+    app:cardBackgroundColor="@color/card_bg"
+    app:cardCornerRadius="@dimen/corner_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/d2">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/timezoneTextView"
+            style="@style/TitleLg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/neutral_primary"
+            app:drawableStartCompat="@drawable/ic_location_on_white_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Singapore" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dateTextView"
+            style="@style/Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d1"
+            android:textColor="@color/neutral_secondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timezoneTextView"
+            tools:text="Sun, 30 May 21:09" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/weatherIconImageView"
+            android:layout_width="@dimen/d4"
+            android:layout_height="@dimen/d4"
+            android:layout_marginTop="@dimen/d2"
+            app:layout_constraintBottom_toBottomOf="@+id/temperatureTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateTextView"
+            tools:srcCompat="@drawable/cloudy" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/temperatureTextView"
+            style="@style/TitleXl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/d1"
+            android:layout_marginTop="@dimen/d2"
+            android:textColor="@color/neutral_primary"
+            app:layout_constraintStart_toEndOf="@+id/weatherIconImageView"
+            app:layout_constraintTop_toBottomOf="@id/dateTextView"
+            tools:text="28&#xb0;" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/summaryTextView"
+            style="@style/Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/neutral_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/temperatureTextView"
+            tools:text="Mostly Sunny" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/minMaxTemperatureTextView"
+            style="@style/Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/neutral_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/summaryTextView"
+            tools:text="32&#xb0; / 27&#xb0;" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/moreButtonView"
+            style="@style/TitleMd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d3"
+            android:background="@drawable/shape_rounded_button"
+            android:text="@string/more"
+            android:textColor="@color/interaction_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/maxMinTemperatureTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
