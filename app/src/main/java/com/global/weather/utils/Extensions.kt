@@ -1,6 +1,7 @@
 package com.global.weather.utils
 
 import android.annotation.SuppressLint
+import com.global.weather.R
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -15,7 +16,6 @@ fun Double.toCelsius(): String {
     return "${celsius.toInt()}\u00B0C"
 }
 
-
 fun Long.toDayOfWeek(): String {
     val timeInMillis = this * 1000L
     val now = System.currentTimeMillis()
@@ -26,5 +26,17 @@ fun Long.toDayOfWeek(): String {
         timeInMillis - now in 0..7 * ONE_DAY_MILLIS -> SimpleDateFormat("EEEE").format(timeInMillis)
 
         else -> toDate()
+    }
+}
+
+fun Long.toHourTime() = SimpleDateFormat("hh:mm").format(this * 1000L)
+
+fun String.toWeatherIconDrawable(): Int {
+    return when {
+        contains("rain", ignoreCase = true) -> R.drawable.rain
+        contains("storm", ignoreCase = true) -> R.drawable.storm
+        contains("cloudy", ignoreCase = true) -> R.drawable.cloudy
+
+        else -> R.drawable.sunrise
     }
 }

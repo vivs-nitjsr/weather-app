@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/d10"
+    android:layout_height="@dimen/d15">
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timeTextView"
+        style="@style/BodySm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d1"
+        android:textColor="@color/neutral_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownIdInLayout"
+        tools:text="16:00" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/weatherIconImageView"
+        android:layout_width="@dimen/d3"
+        android:layout_height="@dimen/d3"
+        android:layout_marginTop="@dimen/d1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeTextView"
+        app:srcCompat="@drawable/cloudy" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/temperatureTextView"
+        style="@style/Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/d1"
+        android:layout_marginTop="@dimen/d1"
+        android:textColor="@color/neutral_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherIconImageView"
+        tools:text="28&#xb0;" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/humidityTextView"
+        style="@style/BodySm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d1"
+        android:drawablePadding="@dimen/d1"
+        android:textColor="@color/neutral_secondary"
+        app:drawableStartCompat="@drawable/ic_humidity_sm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureTextView"
+        tools:text="50%" />
 </androidx.constraintlayout.widget.ConstraintLayout>

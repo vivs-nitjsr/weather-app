@@ -28,7 +28,7 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/dateTextView"
-            style="@style/Body"
+            style="@style/TitleMd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/d1"
@@ -37,6 +37,16 @@
             app:layout_constraintTop_toBottomOf="@+id/timezoneTextView"
             tools:text="Sun, 30 May 21:09" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/summaryTextView"
+            style="@style/Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/neutral_secondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateTextView"
+            tools:text="Mostly Sunny" />
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/weatherIconImageView"
             android:layout_width="@dimen/d4"
@@ -44,7 +54,7 @@
             android:layout_marginTop="@dimen/d2"
             app:layout_constraintBottom_toBottomOf="@+id/temperatureTextView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/dateTextView"
+            app:layout_constraintTop_toBottomOf="@id/summaryTextView"
             tools:srcCompat="@drawable/cloudy" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -56,29 +66,20 @@
             android:layout_marginTop="@dimen/d2"
             android:textColor="@color/neutral_primary"
             app:layout_constraintStart_toEndOf="@+id/weatherIconImageView"
-            app:layout_constraintTop_toBottomOf="@id/dateTextView"
+            app:layout_constraintTop_toBottomOf="@id/summaryTextView"
             tools:text="28&#xb0;" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/summaryTextView"
-            style="@style/Body"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/neutral_secondary"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/temperatureTextView"
-            tools:text="Mostly Sunny" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/minMaxTemperatureTextView"
-            style="@style/Body"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/neutral_secondary"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hourlyReportRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d15"
+            android:layout_marginTop="@dimen/d2"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/summaryTextView"
-            tools:text="32&#xb0; / 27&#xb0;" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/temperatureTextView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

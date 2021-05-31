@@ -1,5 +1,6 @@
 package com.global.weather.presentation.model
 
+import androidx.annotation.DrawableRes
 import com.global.weather.presentation.model.WeatherBaseUiModel.Companion.ITEM_TYPE_MORE_ITEM
 
 data class WeatherReportMoreUiModel(
@@ -7,6 +8,7 @@ data class WeatherReportMoreUiModel(
     val uvValue: String,
     val windText: String,
     val windValue: String,
+    @DrawableRes val icon: Int,
     val humidityText: String,
     val humidityValue: String,
     val dewPointText: String,
