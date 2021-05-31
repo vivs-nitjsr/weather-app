@@ -10,6 +10,8 @@ import com.global.weather.domain.mapper.WeatherDomainMapper
 import com.global.weather.domain.mapper.WeatherReportDomainMapper
 import com.global.weather.domain.mapper.WeatherReportListDomainMapper
 import com.global.weather.domain.repository.WeatherRepository
+import com.global.weather.utils.StringLocalizer
+import com.global.weather.utils.StringLocalizerImpl
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
@@ -66,5 +68,11 @@ internal class WeatherModule {
             weatherReportDomainMapper = weatherReportDomainMapper,
             weatherReportListDomainMapper = weatherReportListDomainMapper
         )
+    }
+
+    @Reusable
+    @Provides
+    fun provideStringLocalizer(application: Application): StringLocalizer {
+        return StringLocalizerImpl(application)
     }
 }

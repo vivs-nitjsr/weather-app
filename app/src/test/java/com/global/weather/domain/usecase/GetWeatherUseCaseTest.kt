@@ -6,7 +6,7 @@ import com.global.weather.WeatherTestData
 import com.global.weather.domain.mapper.WeatherDomainMapper
 import com.global.weather.domain.model.Location
 import com.global.weather.domain.repository.WeatherRepository
-import io.reactivex.rxjava3.core.Observable
+import io.reactivex.Observable
 import org.junit.Assert.assertThrows
 import org.junit.Before
 import org.junit.Rule

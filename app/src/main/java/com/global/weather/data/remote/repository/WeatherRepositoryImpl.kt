@@ -17,7 +17,7 @@ internal class WeatherRepositoryImpl @Inject constructor(
 ) : WeatherRepository {
 
     companion object {
-        const val IS_CACHED_RESPONSE = true
+        const val IS_CACHED_RESPONSE = false
         const val WEATHER_JSON = "weather.json"
     }
 

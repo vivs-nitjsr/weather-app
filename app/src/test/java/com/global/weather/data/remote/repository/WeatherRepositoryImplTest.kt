@@ -1,6 +1,9 @@
 package com.global.weather.data.remote.repository
 
+import android.app.Application
 import com.global.weather.WeatherTestData
+import com.global.weather.commons.AssetFileLoader
+import com.global.weather.commons.JsonParser
 import com.global.weather.data.remote.api.WeatherApi
 import io.reactivex.Observable
 import org.junit.Before
@@ -22,15 +25,28 @@ internal class WeatherRepositoryImplTest {
     @Mock
     private lateinit var weatherApi: WeatherApi
 
-    private lateinit var repository: WeatherRepositoryImpl
+    @Mock
+    private lateinit var assetFileLoader: AssetFileLoader
 
+    @Mock
+    private lateinit var jsonParser: JsonParser
+
+    @Mock
+    private lateinit var application: Application
+
+    private lateinit var repository: WeatherRepositoryImpl
 
     @Before
     fun setUp() {
         whenever(weatherApi.getWeather(any(), any()))
             .thenReturn(Observable.just(WeatherTestData.weatherApiModel))
 
-        repository = WeatherRepositoryImpl(weatherApi)
+        repository = WeatherRepositoryImpl(
+            weatherApi = weatherApi,
+            app = application,
+            assetFileLoader = assetFileLoader,
+            jsonParser = jsonParser
+        )
     }
 
     @Test
