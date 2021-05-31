@@ -8,4 +8,7 @@
     <string name="dew_point">Dew Point</string>
     <string name="visibility">Visibility</string>
     <string name="ozone">Ozone</string>
+    <string name="retry">Retry</string>
+    <string name="location_service_requred">Please allow location permission to get last known place to get weather details</string>
+    <string name="some_error_occured">Some error occured while fetching weather information</string>
 </resources>

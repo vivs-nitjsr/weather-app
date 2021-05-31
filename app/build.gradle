@@ -49,9 +49,13 @@ dependencies {
 
     implementation "com.google.code.gson:gson:$gsonVersion"
 
+    implementation "com.google.android.gms:play-services-location:$googlePlayServicesLocationVersion"
+
     //Rx
     implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
     implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-appcompat:$rxbinding3Version"
+    implementation "com.jakewharton.rxbinding3:rxbinding-material:$rxbinding3Version"
 
     //Dagger
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"

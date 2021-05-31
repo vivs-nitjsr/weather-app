@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ErrorView">
+        <attr
+            name="errorImage"
+            format="reference" />
+        <attr
+            name="errorTitle"
+            format="string|reference" />
+        <attr
+            name="errorTitleColor"
+            format="color|reference" />
+        <attr
+            name="errorDescription"
+            format="string|reference" />
+        <attr
+            name="errorDescriptionColor"
+            format="color|reference" />
+        <attr
+            name="errorRetryTitle"
+            format="string|reference" />
+        <attr
+            name="errorRetryTitleColor"
+            format="color|reference" />
+        <attr name="backgroundColor" />
+    </declare-styleable>
+</resources>

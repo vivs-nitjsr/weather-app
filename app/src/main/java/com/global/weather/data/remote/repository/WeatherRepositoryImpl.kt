@@ -26,9 +26,14 @@ internal class WeatherRepositoryImpl @Inject constructor(
             val jsonString = assetFileLoader.loadFileAsStream(app, WEATHER_JSON)
                 .bufferedReader()
                 .readText()
-            val weatherApiModel = jsonParser.parse(jsonString, WeatherApiModel::class.java)
 
-            return Observable.just(weatherApiModel)
+            return try {
+                val weatherApiModel = jsonParser.parse(jsonString, WeatherApiModel::class.java)
+
+                Observable.just(weatherApiModel)
+            } catch (e: Exception) {
+                Observable.error(Throwable("Some error in parsing weather response"))
+            }
         }
 
         return weatherApi.getWeather(

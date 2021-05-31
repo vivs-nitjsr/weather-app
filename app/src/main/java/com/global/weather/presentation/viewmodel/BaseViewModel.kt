@@ -7,14 +7,6 @@ abstract class BaseViewModel : ViewModel() {
 
     val compositeDisposable = CompositeDisposable()
 
-    fun showLoading() {
-
-    }
-
-    fun hideLoading() {
-
-    }
-
     override fun onCleared() {
         compositeDisposable.clear()
         super.onCleared()

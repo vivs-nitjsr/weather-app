@@ -29,9 +29,9 @@ internal class WeatherReportApiModel(
     @SerializedName("cloudCover")
     val cloudCover: Double,
     @SerializedName("uvIndex")
-    val uvIndex: Int,
+    val uvIndex: Double,
     @SerializedName("visibility")
-    val visibility: Int,
+    val visibility: Double,
     @SerializedName("ozone")
     val ozone: Double,
     @SerializedName("precipIntensity")

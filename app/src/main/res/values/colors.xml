@@ -11,6 +11,7 @@
 
     <color name="card_bg">#181718</color>
     <color name="neutral_primary">#ffffff</color>
+    <color name="neutral_light_surface">#FAFAFA</color>
     <color name="interaction_primary">#ffffff</color>
     <color name="neutral_secondary">#999999</color>
     <color name="button_bg">#3d3d3d</color>
