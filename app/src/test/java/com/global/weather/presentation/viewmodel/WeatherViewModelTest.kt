@@ -64,7 +64,6 @@ class WeatherViewModelTest {
     fun `verify weather report loaded successful when usecase returns value`() {
         viewModel.onViewReady(location)
         verify(weatherStateObserver).onChanged(WeatherViewState.HideError)
-        verify(weatherStateObserver).onChanged(WeatherViewState.ShowWeatherReport)
         verify(weatherStateObserver).onChanged(WeatherViewState.ShowLoading)
         verify(weatherReportStateObserver).onChanged(uiModelList)
         verify(weatherStateObserver).onChanged(WeatherViewState.HideLoading)
@@ -77,9 +76,7 @@ class WeatherViewModelTest {
 
         viewModel.onViewReady(location)
         verify(weatherStateObserver).onChanged(WeatherViewState.HideError)
-        verify(weatherStateObserver).onChanged(WeatherViewState.ShowWeatherReport)
         verify(weatherStateObserver).onChanged(WeatherViewState.ShowLoading)
-        verify(weatherStateObserver).onChanged(WeatherViewState.HideWeatherReport)
         verify(weatherStateObserver).onChanged(WeatherViewState.ShowError)
         verify(weatherStateObserver).onChanged(WeatherViewState.HideLoading)
     }

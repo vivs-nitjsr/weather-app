@@ -70,13 +70,6 @@ internal class WeatherFragment : BaseFragment<FragmentWeatherBinding>(R.layout.f
                         hideErrorView()
                     }
                 }
-                is WeatherViewState.ShowWeatherReport -> {
-                    showRecyclerView()
-                }
-
-                is WeatherViewState.HideWeatherReport -> {
-                    hideRecyclerView()
-                }
                 is WeatherViewState.ShowError -> {
                     showErrorView()
                     attachErrorViewListener()
@@ -136,6 +129,7 @@ internal class WeatherFragment : BaseFragment<FragmentWeatherBinding>(R.layout.f
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode) {
             LOCATION_PERMISSION_REQUEST_CODE -> {
                 if ((grantResults.isNotEmpty() &&
@@ -166,8 +160,8 @@ internal class WeatherFragment : BaseFragment<FragmentWeatherBinding>(R.layout.f
     private fun getLocation() {
         val activity = requireActivity()
 
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(activity)
         if (isLocationPermissionGranted(activity)) {
+            fusedLocationClient = LocationServices.getFusedLocationProviderClient(activity)
             fusedLocationClient.lastLocation
                 .addOnSuccessListener {
                     viewModel.onViewReady(
@@ -184,20 +178,12 @@ internal class WeatherFragment : BaseFragment<FragmentWeatherBinding>(R.layout.f
         viewBinding.run {
             showErrorView()
             attachPermissionErrorViewListener()
-            hideRecyclerView()
+            hideLoading()
         }
     }
 
     private fun updateRecyclerView(data: List<WeatherBaseUiModel>) {
         adapter.update(data)
-    }
-
-    private fun hideRecyclerView() {
-        viewBinding.weatherRecyclerView.isVisible = false
-    }
-
-    private fun showRecyclerView() {
-        viewBinding.weatherRecyclerView.isVisible = true
     }
 
     private fun showErrorView() {

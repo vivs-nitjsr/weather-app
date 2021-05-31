@@ -30,7 +30,6 @@ internal class WeatherViewModel @Inject constructor(
 
     private fun getWeather(location: Location) {
         weatherState.postValue(WeatherViewState.HideError)
-        weatherState.postValue(WeatherViewState.ShowWeatherReport)
         getWeatherUseCase.run(location)
             .subscribeOn(Schedulers.io())
             .doOnSubscribe { showLoading() }
@@ -59,7 +58,6 @@ internal class WeatherViewModel @Inject constructor(
     }
 
     private fun onWeatherFetchFailed(throwable: Throwable) {
-        weatherState.postValue(WeatherViewState.HideWeatherReport)
         weatherState.postValue(WeatherViewState.ShowError)
     }
 }
@@ -67,8 +65,6 @@ internal class WeatherViewModel @Inject constructor(
 internal sealed class WeatherViewState {
     object ShowLoading : WeatherViewState()
     object HideLoading : WeatherViewState()
-    object ShowWeatherReport : WeatherViewState()
-    object HideWeatherReport : WeatherViewState()
     object ShowError : WeatherViewState()
     object HideError : WeatherViewState()
     data class LocationPermissionMissing(val show: Boolean) : WeatherViewState()
