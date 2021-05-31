@@ -3,4 +3,4 @@ Weather App
 
 This App shows the weather for the device GPS location.
 
-![](weather_app_demo.gif)
+<img src="weather_app_demo.gif" align="left" height="600px">
